@@ -1,5 +1,9 @@
 name: Events Demo 1
-on: ...
+on:
+  pull_request:          # this event trigger has activity types
+    types: [edited, opened]           # activiti types can also be written as a list with -
+  workflow_dispatch:
+    # types: [open]
 jobs:
   deploy:
     runs-on: ubuntu-latest
